@@ -8,7 +8,7 @@ $userVerifyCode = FilterRequest::postRequest('userVerifyCode');
 
 // Check if the verification code is empty
 if (empty($userVerifyCode)) {
-    http_response_code(200); // Bad Request
+    http_response_code(400); // Bad Request
     printState("fail", "Verification code is required");
     exit();
 }
